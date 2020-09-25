@@ -41,15 +41,31 @@ def home_page():
     return str(r.text)
 
 
-@app.route('/form')
+@app.route('/form', methods=['POST','GET'])
 def form_page():
-    #after validation 
+    
+    return render_template('form.html')
+
+@app.route('/userconfirm', methods=['POST'])
+def user_confirm():
+    cust_name = request.form['customer_name']
+    customer_age = request.form['customer_age']
+    officer_name = request.form['officer_name']
+    nric = request.form['customer_nric']
+    reg_time = request.form['reg_time']
+    branch_code = request.form['branch_code']
+    image = request.form['image']
+    productType = request.form['productType']
+    
     #customer = Customer_DB(cust_name, age, image_file, product_type)
     #db.session.add(customer)
     #db.session.commit()
-    return render_template('form.html')
+   
+    return render_template('userconfirm.html', user=cust_name)
 
 
+
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
