@@ -1,0 +1,63 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+
+Form{% endblock title %}
+
+{% block main %}
+    <form id="bankForm">
+        <fieldset>
+            <legend>Customer Input</legend>
+            <label>Customer Name: </label>
+            <input type="text" name='customer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
+            <br><br>
+
+            <label>Age: </label>
+            <input type="number" name='customer_age' min = '18'>
+            <br><br>
+
+            <label>Service Officer Name: </label>
+            <input type="text" name='officer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
+            <br><br>
+
+            <label>NRIC: </label>
+            <input type="text" name='customer_nric' pattern="[0-9]{7}" title="eg. 1234567">
+            <br><br>
+
+            <label>Registration Time: </label>
+            <input type="datetime-local" step='1' name='reg_time'>
+            <br><br>
+
+            <label>Branch Code: </label>
+            <input type="text" name='branch_code' pattern="[0-9]{3}" title="eg. 123">
+            <br><br>
+
+            <!-- do a drag and drop -->
+            <label>Image: </label>
+            <input type="file" name='image' accept=".jpg, .png">
+            <br><br>
+
+            <p>Please select your product choice:</p>
+            <input type="radio" id="investor" name="productType" value="investor">
+            <label for="investors">Investor</label><br>
+
+            <input type="radio" id="insurance" name="productType" value="insurance">
+            <label for="insurances">Insurance</label><br>
+
+            <input type="radio" id="loans" name="productType" value="loans">
+            <label for="loans">Loans</label><br>
+
+            <input type="radio" id="savings" name="productType" value="savings">
+            <label for="savings">Savings</label><br>
+
+            <input type="radio" id="creditcard" name="productType" value="creditcard">
+            <label for="creditcard">Credit Card</label><br>
+            <br><br>
+
+
+        </fieldset>
+
+        <input type="submit" id="submit" value="Submit">
+    </form>
+
+{% endblock main %}
