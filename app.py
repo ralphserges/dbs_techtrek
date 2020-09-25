@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+# <<<<<<< HEAD
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import requests
-=======
+# =======
 from flask import Flask, render_template, request, make_response
 from requests import Request, Session
->>>>>>> 53c12e3fdeb5c70313571e4238dc9d0b6fe4b559
+# >>>>>>> 53c12e3fdeb5c70313571e4238dc9d0b6fe4b559
 import json
 import os
 
@@ -34,11 +34,11 @@ def home_page():
     payload = {"customerName":"james",
              "customerAge":"29", 
              "serviceOfficerName":"officer123", 
-             "NRIC": "S5454545B", 
+             "NRIC": "5454545",
              "registrationTime":"25/12/2020 08:12:55", 
              "branchCode":"120", 
              "image":"",
-             "productType":["137","070"]}
+             "productType":["137"]}
 
     token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcml0YXRpdm9maW9uYSIsImlhdCI6MTYwMTAxMDI1MywiZXhwIjoxNjAxMDEwODUzLCJpc3MiOiJ0ZWNodHJlazIwMjAifQ.Ozt4Fi0-9FeE_swLW1Mx-K8WA3f_WyhJxHHnv1nK4mzdLyDn3M5cI7QyjfRQ68rgZq4H0d8lK_YUWsO4JNkVtQ"
     headers = {"Authorization": "Bearer " + token}
@@ -49,7 +49,6 @@ def home_page():
 
 @app.route('/form', methods=['POST','GET'])
 def form_page():
-    
     return render_template('form.html')
 
 
@@ -106,7 +105,7 @@ def login():
 @app.route('/logout')
 def logout():
     return ''
->>>>>>> 53c12e3fdeb5c70313571e4238dc9d0b6fe4b559
+# >>>>>>> 53c12e3fdeb5c70313571e4238dc9d0b6fe4b559
 
 if __name__ == "__main__":
     app.run(debug=True)
