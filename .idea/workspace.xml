@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601015310320</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rework validation">
+      <created>1601015358803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601015358803</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,18 +166,20 @@
     <MESSAGE value="Beautify user form" />
     <MESSAGE value="Beautify html pages" />
     <MESSAGE value="update beautify html pages 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update beautify html pages 2" />
+    <MESSAGE value="rework validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601008881217">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1601008881217" />
-    <state x="417" y="114" key="CommitChangelistDialog2" timestamp="1601015309723">
-      <screen x="0" y="23" width="1680" height="958" />
+    <state x="417" y="114" key="CommitChangelistDialog2" timestamp="1601015358248">
+      <screen x="0" y="23" width="1680" height="956" />
     </state>
     <state x="417" y="100" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1601011351550" />
     <state x="417" y="114" key="CommitChangelistDialog2/0.23.1680.955@0.23.1680.955" timestamp="1601015007987" />
+    <state x="417" y="114" key="CommitChangelistDialog2/0.23.1680.956@0.23.1680.956" timestamp="1601015358248" />
     <state x="417" y="114" key="CommitChangelistDialog2/0.23.1680.958@0.23.1680.958" timestamp="1601015309723" />
     <state x="99" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1601008713406">
       <screen x="0" y="0" width="1680" height="1050" />
