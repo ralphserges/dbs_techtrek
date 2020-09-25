@@ -30,8 +30,8 @@ class LoginPage extends React.Component {
         return (
             <div>
                 <div className="alert alert-info">
-                    Username: test<br />
-                    Password: test
+                    Username: caritativofiona<br />
+                    Password: 922cb712bea79bc8
                 </div>
                 <h2>Welcome, Login here.</h2>
 
