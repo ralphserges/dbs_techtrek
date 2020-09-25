@@ -3,7 +3,7 @@
 {% block title %}Form{% endblock title %}
 
 {% block main %}
-    <form>
+    <form id="bankForm">
         <fieldset>
             <legend>Customer Input</legend>
             <label>Customer Name: </label>
@@ -12,10 +12,6 @@
 
             <label>Age: </label>
             <input type="text" name='customer_age'>
-            <br><br>
-            
-            <label>Date of Birth: </label>
-            <input type="text" name='customer_dob'>
             <br><br>
 
             <label>Service Officer Name: </label>
@@ -28,20 +24,27 @@
 
             <!-- do a drag and drop -->
             <label>Image: </label>
-            <input type="text" name='image'>
+            <input type="file" name='image'>
             <br><br>
 
             <p>Please select your product choice:</p>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <input type="radio" id="investor" name="productType" value="investor">
+            <label for="male">Investor</label><br>
 
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
+            <input type="radio" id="insurance" name="productType" value="insurance">
+            <label for="female">Insurance</label><br>
 
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label>
+            <input type="radio" id="loans" name="productType" value="loans">
+            <label for="loans">Loans</label><br>
 
+            <input type="radio" id="savings" name="productType" value="savings">
+            <label for="savings">Savings</label><br>
 
+            <input type="radio" id="creditcard" name="productType" value="creditcard">
+            <label for="creditcard">Credit Card</label><br>
+            <br><br>
+
+            <input type="button" id="submit" value="Submit">
         </fieldset>
     </form>
 {% endblock main %}
