@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block main %}
+    <form method="POST" action="/form">
+        <fieldset>
+            <legend>Customer Input</legend>
+            <label>username: </label>
+            <input input type="text" name='username'>
+            <br><br>
+            <label>password: </label>
+            <input input type="password" name='username'>
+            
+        </fieldset>
+
+        <input type="submit" id="submit" value="Submit">
+    </form>
+{% endblock main %}
