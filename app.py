@@ -22,6 +22,7 @@ class Customer_DB(db.Model):
 @app.route('/')
 @app.route('/home')
 def home_page():
+
     url = "http://techtrek2020.ap-southeast-1.elasticbeanstalk.com/validateForm"
 
     payload = {"customerName":"james",
