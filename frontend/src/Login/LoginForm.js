@@ -98,7 +98,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="loginForm">
-        Log In to the Bak
+        Log In to the Bank
         <InputField
           type='text'
           placeholder='Username'
