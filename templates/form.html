@@ -1,38 +1,48 @@
 {% extends "base_template.html" %}
 
-{% block title %}Form{% endblock title %}
+{% block title %}
+
+Form{% endblock title %}
 
 {% block main %}
     <form id="bankForm">
         <fieldset>
             <legend>Customer Input</legend>
             <label>Customer Name: </label>
-            <input type="text" name='customer_name'>
+            <input type="text" name='customer_name' pattern="[a-zA-z]{,64}">
             <br><br>
 
             <label>Age: </label>
-            <input type="text" name='customer_age'>
+            <input type="number" name='customer_age' min = '18'>
             <br><br>
 
             <label>Service Officer Name: </label>
-            <input type="text" name='officer_name'>
+            <input type="text" name='officer_name' pattern="[a-zA-z]{,64}">
+            <br><br>
+
+            <label>NRIC: </label>
+            <input type="text" name='customer_nric' pattern="[0-9]{7}">
+            <br><br>
+
+            <label>Registration Time: </label>
+            <input type="datetime-local" name='reg_time'>
             <br><br>
 
             <label>Branch Code: </label>
-            <input type="text" name='branch_code'>
+            <input type="text" name='branch_code' pattern="[0-9]{3}">
             <br><br>
 
             <!-- do a drag and drop -->
             <label>Image: </label>
-            <input type="file" name='image'>
+            <input type="file" name='image' accept=".jpg, .png">
             <br><br>
 
             <p>Please select your product choice:</p>
             <input type="radio" id="investor" name="productType" value="investor">
-            <label for="male">Investor</label><br>
+            <label for="investors">Investor</label><br>
 
             <input type="radio" id="insurance" name="productType" value="insurance">
-            <label for="female">Insurance</label><br>
+            <label for="insurances">Insurance</label><br>
 
             <input type="radio" id="loans" name="productType" value="loans">
             <label for="loans">Loans</label><br>
@@ -44,8 +54,9 @@
             <label for="creditcard">Credit Card</label><br>
             <br><br>
 
-            <input type="button" id="submit" value="Submit">
+
         </fieldset>
+        <input type="submit" id="submit" value="Submit">
     </form>
 
 {% endblock main %}
