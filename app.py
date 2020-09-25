@@ -109,6 +109,9 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+    
 '''
  url = "http://techtrek2020.ap-southeast-1.elasticbeanstalk.com/validateForm"
 

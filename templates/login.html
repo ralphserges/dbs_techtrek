@@ -3,9 +3,26 @@
 {% block title %}Login{% endblock title %}
 
 {% block main %}
+
+<style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+      font-family: Garamond;
+    }
+    .img-container {
+        text-align: center;
+     }
+</style>
+<body>
+<div class="img-container">
+    <img src="DBS_Bank_logo_logotype-700x246.png" alt="DBS" width="100">
+</div>
+<div class="content">
     <form method="POST" action="/form">
+        <br>
         <fieldset>
-            <legend>Customer Input</legend>
+            <legend align="center">Login</legend>
             <label>username: </label>
             <input input type="text" name='username' required>
             <br><br>
@@ -13,7 +30,8 @@
             <input input type="password" name='username' required>
             
         </fieldset>
-
+        <br>
         <input type="submit" id="submit" value="Submit">
     </form>
+</div>
 {% endblock main %}

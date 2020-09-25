@@ -5,12 +5,33 @@
 Form{% endblock title %}
 
 {% block main %}
-    <h1> Welcome</h1>
+
+<style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+      font-family: Garamond;
+    }
+    .img-container {
+        text-align: center;
+     }
+
+</style>
+<body>
+<div class="img-container">
+    <img src="DBS_Bank_logo_logotype-700x246.png" alt="DBS" width="100">
+</div>
+
+<div class="content">
     <form method="POST" action="/userconfirm">
+        <br>
         <fieldset>
-            <legend>Customer Input</legend>
+            <legend align="center">Customer Details</legend>
+            <br>
             <label>Customer Name: </label>
             <input type="text" name='customer_name' maxlength="64" pattern="[a-zA-Z]{,64}" title="Only letters please!">
+
+
             <br><br>
 
             <label>Age: </label>
@@ -40,10 +61,10 @@ Form{% endblock title %}
 
             <p>Please select your product choice:</p>
             <input type="radio" id="investor" name="productType" value="investor">
-            <label for="investors">Investor</label><br>
+            <label for="investor">Investor</label><br>
 
             <input type="radio" id="insurance" name="productType" value="insurance">
-            <label for="insurances">Insurance</label><br>
+            <label for="insurance">Insurance</label><br>
 
             <input type="radio" id="loans" name="productType" value="loans">
             <label for="loans">Loans</label><br>
@@ -53,12 +74,14 @@ Form{% endblock title %}
 
             <input type="radio" id="creditcard" name="productType" value="creditcard">
             <label for="creditcard">Credit Card</label><br>
-            <br><br>
-
+            <br>
 
         </fieldset>
-
+        <br>
         <input type="submit" id="submit" value="Submit">
     </form>
+
+</div>
+</body>
 
 {% endblock main %}
