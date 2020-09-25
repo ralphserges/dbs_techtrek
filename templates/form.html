@@ -9,7 +9,7 @@ Form{% endblock title %}
         <fieldset>
             <legend>Customer Input</legend>
             <label>Customer Name: </label>
-            <input type="text" name='customer_name' pattern="[a-zA-z]{,64}">
+            <input type="text" name='customer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
             <br><br>
 
             <label>Age: </label>
@@ -17,11 +17,11 @@ Form{% endblock title %}
             <br><br>
 
             <label>Service Officer Name: </label>
-            <input type="text" name='officer_name' pattern="[a-zA-z]{,64}">
+            <input type="text" name='officer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
             <br><br>
 
             <label>NRIC: </label>
-            <input type="text" name='customer_nric' pattern="[0-9]{7}">
+            <input type="text" name='customer_nric' pattern="[0-9]{7}" title="eg. 1234567">
             <br><br>
 
             <label>Registration Time: </label>
@@ -29,7 +29,7 @@ Form{% endblock title %}
             <br><br>
 
             <label>Branch Code: </label>
-            <input type="text" name='branch_code' pattern="[0-9]{3}">
+            <input type="text" name='branch_code' pattern="[0-9]{3}" title="eg. 123">
             <br><br>
 
             <!-- do a drag and drop -->
@@ -56,6 +56,7 @@ Form{% endblock title %}
 
 
         </fieldset>
+
         <input type="submit" id="submit" value="Submit">
     </form>
 
