@@ -1,0 +1,47 @@
+{% extends "base_template.html" %}
+
+{% block title %}Form{% endblock title %}
+
+{% block main %}
+    <form>
+        <fieldset>
+            <legend>Customer Input</legend>
+            <label>Customer Name: </label>
+            <input type="text" name='customer_name'>
+            <br><br>
+
+            <label>Age: </label>
+            <input type="text" name='customer_age'>
+            <br><br>
+            
+            <label>Date of Birth: </label>
+            <input type="text" name='customer_dob'>
+            <br><br>
+
+            <label>Service Officer Name: </label>
+            <input type="text" name='officer_name'>
+            <br><br>
+
+            <label>Branch Code: </label>
+            <input type="text" name='branch_code'>
+            <br><br>
+
+            <!-- do a drag and drop -->
+            <label>Image: </label>
+            <input type="text" name='image'>
+            <br><br>
+
+            <p>Please select your product choice:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+
+
+        </fieldset>
+    </form>
+{% endblock main %}
