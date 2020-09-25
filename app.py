@@ -13,9 +13,10 @@ db = SQLAlchemy(app)
 
 class Customer_DB(db.Model):
     id = db.Column(db.Integer, primary_key=True) 
-    cust_name = db.Column(db.String(64), unique=True, nullable=False)
+    cust_name = db.Column(db.String(64), nullable=False)
     age = db.Column(db.Integer, nullable=False)
-    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
+    nric = db.Column(db.String(64),  nullable=False)
+    officer_name = db.Column(db.String(64), nullable=False)
     product_type = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
@@ -42,26 +43,32 @@ def login_page():
    
 @app.route('/form', methods=['POST','GET'])
 def form_page():
-    username = request.form['username']
-    return render_template('form.html', username=username)
+    
+    return render_template('form.html')
+
 
 
 @app.route('/userconfirm', methods=['POST'])
 def user_confirm():
-    cust_name = request.form['customer_name']
+    customer_name = request.form['customer_name']
     customer_age = request.form['customer_age']
-    officer_name = request.form['officer_name']
-    nric = request.form['customer_nric']
+    officer = request.form['officer_name']
+    cust_nric = request.form['customer_nric']
     reg_time = request.form['reg_time']
     branch_code = request.form['branch_code']
     image = request.form['image']
     productType = request.form['productType']
     
-    #customer = Customer_DB(cust_name, age, image_file, product_type)
-    #db.session.add(customer)
-    #db.session.commit()
+    customer = Customer_DB(cust_name=customer_name, age=customer_age, nric=cust_nric, officer_name=officer, product_type=productType)
+    db.session.add(customer)
+    db.session.commit()
+
+    result_dict= [cust.__dict__ for cust in Customer_DB.query.all()]
    
-    return render_template('userconfirm.html', user=cust_name)
+    return render_template('userconfirm.html', cust=customer_name ,allcust=result_dict)
+    
+
+
 
 @app.route('/validation', methods=['GET'])
 def login():

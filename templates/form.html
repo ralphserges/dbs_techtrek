@@ -5,12 +5,12 @@
 Form{% endblock title %}
 
 {% block main %}
-    <h1> Welcome {{ username }}</h1>
+    <h1> Welcome</h1>
     <form method="POST" action="/userconfirm">
         <fieldset>
             <legend>Customer Input</legend>
             <label>Customer Name: </label>
-            <input type="text" name='customer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
+            <input type="text" name='customer_name' maxlength="64" pattern="[a-zA-Z]{,64}" title="Only letters please!">
             <br><br>
 
             <label>Age: </label>
@@ -18,7 +18,7 @@ Form{% endblock title %}
             <br><br>
 
             <label>Service Officer Name: </label>
-            <input type="text" name='officer_name' maxlength="64" pattern="[a-zA-Z]" title="Only letters please!">
+            <input type="text" name='officer_name' maxlength="64" pattern="[a-zA-Z]{,64}" title="Only letters please!">
             <br><br>
 
             <label>NRIC: </label>

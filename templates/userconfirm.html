@@ -3,5 +3,16 @@
 {% block title %}user confirm{% endblock title %}
 
 {% block main %}
-    <h1> Hello {{ user }}</h1>
+    <h1> added {{ cust }} to database</h1>
+    <br><br>
+    <h3>All customer info in database</h3>
+    {% for cust in allcust %}
+        <ul>
+            <li>Customer name: {{ cust['cust_name'] }}</li>
+            <li>Customer age: {{ cust['age'] }}</li>
+            <li>Customer served by : {{ cust['officer_name'] }}</li>
+            <li>Customer product choice : {{ cust['product_type'] }}</li>
+        </ul>
+    {% endfor %}
+    <a href="/form"><button>Go Back to Form</button></a>
 {% endblock main %}
